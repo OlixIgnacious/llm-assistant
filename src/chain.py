@@ -1,5 +1,5 @@
-from .prompts import render_analysis_prompt, SYSTEM_PROMPT, BEHAVIOR_PROMPT
-from .models import call_completion
+from prompts import render_analysis_prompt, SYSTEM_PROMPT, BEHAVIOR_PROMPT
+from models import call_completion
 
 def run_analysis_chain(context: str, question: str, output_mode: str = "text") -> str:
     prompt = render_analysis_prompt(context, question)
