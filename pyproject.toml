@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-assistant"
+version = "0.1.0"
+description = "A project for LLM-based assistant"
+authors = [{name = "Ashwini Sharma", email = "ashwini.sharma0807@gmail.com"}]
+dependencies = []

@@ -1,3 +1,13 @@
+import os
+import sys
+
+# Add project src directory to Python path
+CURRENT_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+SRC_DIR = os.path.join(PROJECT_ROOT, "src")
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
 import gradio as gr
 from chain import run_analysis_chain
 
@@ -47,3 +57,5 @@ with gr.Blocks() as demo:
         inputs = [query_tb, model_dd, output_mode_dd],
         outputs = [answer_tb],
     )
+if __name__ == "__main__":
+    demo.launch(share=True)
